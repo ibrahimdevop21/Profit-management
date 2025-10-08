@@ -1,0 +1,231 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getLocaleFromPath } from '../../i18n';
+import { loadTranslations, tSync } from '../../i18n/index.js';
+
+const locale = getLocaleFromPath(Astro.url.pathname);
+const translations = await loadTranslations(locale);
+
+// Helper function for translations
+const t = (key: string, fallback?: string) => tSync(key, locale, translations, fallback);
+---
+
+<BaseLayout title={t('contact.title')} description={t('contact.description')} locale={locale}>
+  <!-- Hero Section -->
+  <section class="relative min-h-[60vh] flex items-center justify-center bg-gradient-to-br from-accent-600 via-accent-700 to-primary-600 overflow-hidden">
+    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="absolute inset-0">
+      <div class="absolute top-20 left-20 w-32 h-32 bg-secondary-400/20 rounded-full animate-bounce-slow"></div>
+      <div class="absolute bottom-32 right-16 w-24 h-24 bg-primary-400/20 rounded-full animate-bounce-slow" style="animation-delay: 1s;"></div>
+      <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-accent-300/30 rounded-full animate-bounce-slow" style="animation-delay: 2s;"></div>
+    </div>
+    
+    <div class="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
+      <h1 class="text-5xl lg:text-6xl font-bold mb-6 animate-fade-in">
+        {t('contact.hero.title')}
+      </h1>
+      <p class="text-xl lg:text-2xl text-accent-100 max-w-3xl mx-auto leading-relaxed animate-slide-up">
+        {t('contact.hero.subtitle')}
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Form & Info -->
+  <section class="section bg-white" dir="rtl">
+    <div class="section-container">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <!-- Contact Form -->
+        <div class="animate-slide-in-left">
+          <div class="bg-neutral-50 rounded-3xl p-8 shadow-brand">
+            <h2 class="text-3xl font-bold text-text-primary mb-6">{t('contact.form.title')}</h2>
+            <form class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label for="firstName" class="block text-sm font-semibold text-text-primary mb-2">{t('contact.form.firstName')}</label>
+                  <input type="text" id="firstName" name="firstName" required class="form-input">
+                </div>
+                <div>
+                  <label for="lastName" class="block text-sm font-semibold text-text-primary mb-2">{t('contact.form.lastName')}</label>
+                  <input type="text" id="lastName" name="lastName" required class="form-input">
+                </div>
+              </div>
+              
+              <div>
+                <label for="email" class="block text-sm font-semibold text-text-primary mb-2">{t('contact.form.email')}</label>
+                <input type="email" id="email" name="email" required class="form-input">
+              </div>
+              
+              <div>
+                <label for="phone" class="block text-sm font-semibold text-text-primary mb-2">{t('contact.form.phone')}</label>
+                <input type="tel" id="phone" name="phone" class="form-input">
+              </div>
+              
+              <div>
+                <label for="company" class="block text-sm font-semibold text-text-primary mb-2">{t('contact.form.company')}</label>
+                <input type="text" id="company" name="company" class="form-input">
+              </div>
+              
+              <div>
+                <label for="service" class="block text-sm font-semibold text-text-primary mb-2">{t('contact.form.service')}</label>
+                <select id="service" name="service" class="form-input">
+                  <option value="">{t('contact.form.selectService')}</option>
+                  <option value="accounting">{t('contact.form.services.accounting')}</option>
+                  <option value="tax">{t('contact.form.services.tax')}</option>
+                  <option value="consulting">{t('contact.form.services.consulting')}</option>
+                  <option value="business-formation">{t('contact.form.services.businessFormation')}</option>
+                  <option value="payroll">{t('contact.form.services.payroll')}</option>
+                  <option value="training">{t('contact.form.services.training')}</option>
+                  <option value="audit">{t('contact.form.services.audit')}</option>
+                  <option value="other">{t('contact.form.services.other')}</option>
+                </select>
+              </div>
+              
+              <div>
+                <label for="message" class="block text-sm font-semibold text-text-primary mb-2">{t('contact.form.message')}</label>
+                <textarea id="message" name="message" rows="5" required class="form-input resize-none" placeholder="{t('contact.form.messagePlaceholder')}"></textarea>
+              </div>
+              
+              <button type="submit" class="btn-primary w-full">
+                {t('contact.form.submit')}
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="animate-slide-in-right">
+          <div class="space-y-8">
+            <div>
+              <h2 class="text-3xl font-bold text-text-primary mb-6">{t('contact.info.title')}</h2>
+              <p class="text-lg text-text-secondary leading-relaxed mb-8">
+                {t('contact.info.description')}
+              </p>
+            </div>
+
+            <!-- Contact Cards -->
+            <div class="space-y-6">
+              <!-- Phone -->
+              <div class="flex items-start gap-4 p-6 bg-primary-50 rounded-2xl">
+                <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-text-primary mb-2">{t('contact.info.phone.title')}</h3>
+                  <p class="text-text-secondary mb-2">{t('contact.info.phone.description')}</p>
+                  <a href="tel:+1234567890" class="text-primary-600 font-semibold hover:text-primary-700 transition-colors">
+                    {t('contact.info.phone.number')}
+                  </a>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="flex items-start gap-4 p-6 bg-secondary-50 rounded-2xl">
+                <div class="w-12 h-12 bg-secondary-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-text-primary mb-2">{t('contact.info.email.title')}</h3>
+                  <p class="text-text-secondary mb-2">{t('contact.info.email.description')}</p>
+                  <a href="mailto:info@profitmanagement.com" class="text-secondary-600 font-semibold hover:text-secondary-700 transition-colors">
+                    {t('contact.info.email.address')}
+                  </a>
+                </div>
+              </div>
+
+              <!-- Office -->
+              <div class="flex items-start gap-4 p-6 bg-accent-50 rounded-2xl">
+                <div class="w-12 h-12 bg-accent-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-text-primary mb-2">{t('contact.info.office.title')}</h3>
+                  <p class="text-text-secondary mb-2">{t('contact.info.office.description')}</p>
+                  <address class="text-accent-600 font-semibold not-italic">
+                    {t('contact.info.office.address')}
+                  </address>
+                </div>
+              </div>
+            </div>
+
+            <!-- Business Hours -->
+            <div class="bg-neutral-50 rounded-2xl p-6">
+              <h3 class="text-xl font-bold text-text-primary mb-4">{t('contact.info.hours.title')}</h3>
+              <div class="space-y-2">
+                <div class="flex justify-between">
+                  <span class="text-text-secondary">{t('contact.info.hours.weekdays')}</span>
+                  <span class="text-text-primary font-semibold">{t('contact.info.hours.weekdaysTime')}</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-text-secondary">{t('contact.info.hours.saturday')}</span>
+                  <span class="text-text-primary font-semibold">{t('contact.info.hours.saturdayTime')}</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-text-secondary">{t('contact.info.hours.sunday')}</span>
+                  <span class="text-text-primary font-semibold">{t('contact.info.hours.sundayTime')}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section bg-neutral-50" dir="rtl">
+    <div class="section-container">
+      <div class="text-center mb-20">
+        <span class="text-secondary-600 font-semibold text-sm uppercase tracking-wider">{t('contact.faq.label')}</span>
+        <h2 class="text-4xl lg:text-5xl font-bold text-text-primary mb-6 mt-2">
+          {t('contact.faq.title')}
+        </h2>
+        <p class="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+          {t('contact.faq.subtitle')}
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto space-y-6">
+        <!-- FAQ Item 1 -->
+        <div class="bg-white rounded-2xl p-6 shadow-brand">
+          <h3 class="text-xl font-bold text-text-primary mb-3">{t('contact.faq.q1.question')}</h3>
+          <p class="text-text-secondary leading-relaxed">
+            {t('contact.faq.q1.answer')}
+          </p>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="bg-white rounded-2xl p-6 shadow-brand">
+          <h3 class="text-xl font-bold text-text-primary mb-3">{t('contact.faq.q2.question')}</h3>
+          <p class="text-text-secondary leading-relaxed">
+            {t('contact.faq.q2.answer')}
+          </p>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="bg-white rounded-2xl p-6 shadow-brand">
+          <h3 class="text-xl font-bold text-text-primary mb-3">{t('contact.faq.q3.question')}</h3>
+          <p class="text-text-secondary leading-relaxed">
+            {t('contact.faq.q3.answer')}
+          </p>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="bg-white rounded-2xl p-6 shadow-brand">
+          <h3 class="text-xl font-bold text-text-primary mb-3">{t('contact.faq.q4.question')}</h3>
+          <p class="text-text-secondary leading-relaxed">
+            {t('contact.faq.q4.answer')}
+          <p class="text-text-secondary leading-relaxed font-arabic">
+            نرد عادة على جميع الاستفسارات خلال 24 ساعة في أيام العمل. للأمور العاجلة، يرجى الاتصال بنا مباشرة.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

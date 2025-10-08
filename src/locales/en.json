@@ -1,0 +1,268 @@
+{
+  "meta": {
+    "title": "Profit Management Consulting and Training Company - Leading Your Business Growth and Profitability",
+    "description": "A leading Egyptian accountancy firm delivering high-quality services. With 26+ years of industrial experience, we guide companies in improving financial positions and profitability.",
+    "keywords": "accounting, costing, budgeting, auditing, financial consulting, ERP, financial training, feasibility studies",
+    "website": "profit-manage.com",
+    "email": "info@profit-manage.com"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "contact": "Contact",
+    "language": "العربية"
+  },
+  "hero": {
+    "title": "Leading Your Business Growth and Profitability",
+    "subtitle": "A leading Egyptian accountancy firm delivering high-quality services with 26+ years of experience",
+    "cta": "Get Started Today",
+    "cta_secondary": "Learn More"
+  },
+  "about": {
+    "title": "Who We Are",
+    "subtitle": "Your Trusted Financial Partner",
+    "company_name": "Profit Management Consulting and Training Company",
+    "description": "Profit Management Consulting and Training Company is a leading Egyptian accountancy firm delivering high-quality services. Our partners and expert staff uphold professional leadership and client service, adhering to modern governance, planning, and ethics.",
+    "experience": "With years of cross-industry experience, our team identifies obstacles and provides innovative solutions, offering flexible, value-added services with boundless knowledge.",
+    "mission": "We pursue peak professionalism in costing, budgeting, reporting, and economic and financial consulting to lead your Profit.",
+    "years_experience": "With our 26+ years of industrial experience guide companies in improving financial positions and profitability.",
+    "objective": {
+      "title": "Our Objective",
+      "description": "Leading your profit through an academic team with Ph.D. in costing, budgeting, and auditing, and extensive experience in jobs and consulting since 1999 across various environments. Our goal is to integrate finance with all other departments, ensuring business profitability and achieving internal controls."
+    },
+    "why_us": {
+      "title": "Why We?",
+      "subtitle": "If your company suffers from one or more of the following problems, we are the target",
+      "problems": [
+        "Ambitious growth plans without sufficient systems or human capabilities to support expansion",
+        "Declining profit margins despite continuous revenue growth",
+        "Emergence of competitors offering lower-quality products at cheaper prices, creating pricing pressure",
+        "Lack of real-time financial data needed for informed decision-making",
+        "Absence of strategic financial planning to ensure sustainable profitability",
+        "Escalating operational costs without effective cost-control mechanisms",
+        "Unexplained losses in raw materials, packaging, or workforce productivity",
+        "Inability to identify hidden or unnecessary expenses",
+        "Budgets that is unrealistic or disconnected from actual business objectives",
+        "Poor monitoring of spending and deviations between planned and actual expenditures",
+        "Launching projects without proper financial or market analysis",
+        "Uncertainty in calculating return on investment (ROI) for major purchases such as new production lines",
+        "Employees' lack of financial literacy to implement strategies effectively",
+        "Skills gap in using modern financial tools and systems",
+        "Administrative silos among leaders, with departments working independently rather than collaboratively",
+        "Difficulty aligning and consolidating financial data across departments",
+        "Inefficient allocation of financial, human, and material resources",
+        "Misallocation of funds leading to underperformance",
+        "Processes that is time-consuming and resource-heavy",
+        "Unknown bottlenecks that lower productivity and increase costs",
+        "Lack of HR programs connecting talent development with profitability",
+        "Need for an ERP system but inability to find qualified staff to implement it successfully",
+        "Dependence on outdated manual accounting systems prone to errors",
+        "Lack of real-time financial data for timely and accurate decision-making",
+        "Overspending on marketing campaigns without measurable returns",
+        "Weak connection between marketing activities and actual revenue growth"
+      ]
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "We achieve corporate profitability through AI analysis of all revenue and expense items",
+    "profitability": {
+      "title": "Corporate Profitability Leadership",
+      "description": "Our Financial Consulting Team in Corporate Profitability Leadership plays a central role in guiding companies to achieve sustainable profit growth by aligning financial strategies with operational excellence."
+    },
+    "cost_management": {
+      "title": "Corporate Cost Management",
+      "description": "To achieve global cost ratios for the same activity. Our team helps organizations control expenses, optimize spending, and ensure that every cost contributes to profitability and strategic goals."
+    },
+    "budgeting": {
+      "title": "Budget Development and Management",
+      "description": "To know what your activity should be. Our team ensures that companies design realistic financial plans and manage them effectively to achieve strategic goals."
+    },
+    "feasibility": {
+      "title": "Feasibility Studies",
+      "description": "For projects and new production lines. Our team ensures that business ideas and projects are evaluated with financial accuracy and strategic insight before significant investments are made."
+    },
+    "accounting_setup": {
+      "title": "Accounting System Setup",
+      "description": "Complete accounting system setup for startups, with assistance in selecting appropriate human resources to implement the system efficiently."
+    },
+    "inventory": {
+      "title": "Inventory Control System Design",
+      "description": "Manual inventory control systems design and monitoring, with assistance in implementing automated systems to ensure accurate tracking and cost control."
+    },
+    "erp": {
+      "title": "Integration of Business Activities with ERP Systems",
+      "description": "Our team plays a pivotal role in aligning financial strategies with enterprise-wide digital transformation."
+    },
+    "resource_management": {
+      "title": "Resource Management and Operational Efficiency Improvement",
+      "description": "Our team helps organizations streamline processes, eliminate waste, and maximize productivity while maintaining financial discipline."
+    },
+    "digital_accounting": {
+      "title": "Digital Accounting",
+      "description": "With implementation of digital systems and AI-driven tools to ensure accuracy and efficiency in financial management."
+    },
+    "marketing_consulting": {
+      "title": "Marketing Consulting",
+      "description": "To align your marketing plans with target returns. Our team supports organizations by aligning financial strategies with marketing initiatives."
+    },
+    "training": {
+      "title": "Human Resources Training and Development",
+      "description": "On all the above, with performance evaluation for all financial management staff through tests with different models to match job titles and specializations."
+    },
+    "additional": {
+      "title": "Additional Services",
+      "items": [
+        "Anti-dumping files for industrial companies",
+        "Local component ratio certificates",
+        "Tender studies and fair price determination",
+        "Export support model procedures"
+      ]
+    }
+  },
+  "features": {
+    "title": "Why Choose Us",
+    "experience": {
+      "title": "Years of Experience",
+      "description": "Decades of combined experience in accounting and business consulting"
+    },
+    "certified": {
+      "title": "Certified Professionals",
+      "description": "Our team consists of certified accountants and financial experts"
+    },
+    "technology": {
+      "title": "Modern Technology",
+      "description": "We use the latest accounting software and digital solutions"
+    },
+    "support": {
+      "title": "24/7 Support",
+      "description": "Round-the-clock support for all your financial needs"
+    }
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "client1": {
+      "name": "Sarah Johnson",
+      "company": "Tech Innovations LLC",
+      "text": "Profit Management has been instrumental in helping us streamline our financial processes. Their expertise and professionalism are unmatched."
+    },
+    "client2": {
+      "name": "Ahmed Al-Rashid",
+      "company": "Al-Rashid Trading",
+      "text": "The team's attention to detail and comprehensive approach to our accounting needs has saved us time and money. Highly recommended!"
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Ready to take your business to the next level?",
+    "description": "Contact us today for a free consultation and discover how we can help optimize your financial operations.",
+    "hero": {
+      "title": "Get In Touch",
+      "subtitle": "Ready to take your business to the next level? Let's discuss your financial goals"
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "company": "Company Name",
+      "service": "Service Needed",
+      "selectService": "Select a service",
+      "services": {
+        "accounting": "Accounting & Bookkeeping",
+        "tax": "Tax Planning & Compliance",
+        "consulting": "Financial Consulting",
+        "businessFormation": "Business Formation",
+        "payroll": "Payroll Management",
+        "training": "Financial Training",
+        "audit": "Audit & Assurance",
+        "other": "Other"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your business and how we can help...",
+      "submit": "Send Message",
+      "success": "Thank you! We'll get back to you soon.",
+      "error": "Please fill in all required fields."
+    },
+    "info": {
+      "title": "Contact Information",
+      "description": "We're here to help your business succeed. Reach out to us through any of the channels below, and we'll respond promptly.",
+      "phone": {
+        "title": "Phone",
+        "description": "Call us during business hours",
+        "number": "+201068970607"
+      },
+      "email": {
+        "title": "Email",
+        "description": "Send us an email anytime",
+        "address": "info@profitmanagement.com"
+      },
+      "office": {
+        "title": "Office",
+        "description": "Visit us at our office",
+        "address": "Al-Multaqa Al-Arabi District, Sheraton Residences, directly on the highway next to B Auto car showroom"
+      },
+      "hours": {
+        "title": "Business Hours",
+        "weekdays": "Saturday - Thursday",
+        "weekdaysTime": "10:00 AM - 6:00 PM",
+        "saturday": "Saturday",
+        "saturdayTime": "10:00 AM - 6:00 PM",
+        "sunday": "Sunday",
+        "sundayTime": "10:00 AM - 6:00 PM",
+        "monday": "Monday",
+        "mondayTime": "10:00 AM - 6:00 PM",
+        "tuesday": "Tuesday",
+        "tuesdayTime": "10:00 AM - 6:00 PM",
+        "wednesday": "Wednesday",
+        "wednesdayTime": "10:00 AM - 6:00 PM",
+        "thursday": "Thursday",
+        "thursdayTime": "10:00 AM - 6:00 PM",
+        "friday": "Friday",
+        "fridayTime": "Closed"
+      }
+    },
+    "faq": {
+      "label": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Find answers to common questions about our services and processes",
+      "q1": {
+        "question": "What services do you offer?",
+        "answer": "We provide comprehensive financial services including accounting & bookkeeping, tax planning, financial consulting, business formation, payroll management, and financial training."
+      },
+      "q2": {
+        "question": "How do you price your services?",
+        "answer": "Our pricing varies based on the service and complexity of your needs. We offer both hourly rates and fixed-price packages. Contact us for a customized quote."
+      },
+      "q3": {
+        "question": "Do you work with small businesses?",
+        "answer": "Yes, we work with businesses of all sizes, from startups and small businesses to large enterprises. Our services are scalable to meet your specific needs."
+      },
+      "q4": {
+        "question": "How quickly do you respond to inquiries?",
+        "answer": "We typically respond to all inquiries within 24 hours on business days. For urgent matters, please call us directly."
+      }
+    }
+  },
+  "footer": {
+    "company": "Profit Management Consulting",
+    "description": "Professional accounting and business consulting services for growing enterprises.",
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "careers": "Careers"
+    },
+    "copyright": "© 2024 Profit Management Consulting. All rights reserved."
+  },
+  "common": {
+    "read_more": "Read More",
+    "learn_more": "Learn More",
+    "get_quote": "Get Quote",
+    "contact_us": "Contact Us",
+    "back_to_top": "Back to Top",
+    "loading": "Loading...",
+    "error": "An error occurred. Please try again."
+  }
+}
