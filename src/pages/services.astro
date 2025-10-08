@@ -1,8 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getLocaleFromPath, t } from '../i18n';
+import { getLocaleFromPath, loadTranslations } from '../i18n';
 
 const locale = getLocaleFromPath(Astro.url.pathname);
+const translations = await loadTranslations(locale);
+
+// Helper function for translations
+const t = (key: string, fallback?: string) => {
+  const keys = key.split('.');
+  let value: any = translations;
+  for (const k of keys) {
+    value = value?.[k];
+  }
+  return typeof value === 'string' ? value : (fallback || key);
+};
 ---
 
 <BaseLayout title="Services - Profit Management Consulting" description="Comprehensive financial services including accounting, tax planning, business consulting, and financial analysis" locale={locale}>
@@ -17,10 +28,10 @@ const locale = getLocaleFromPath(Astro.url.pathname);
     
     <div class="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
       <h1 class="text-5xl lg:text-6xl font-bold mb-6 animate-fade-in">
-        Our Services
+        {t('services.hero.title')}
       </h1>
       <p class="text-xl lg:text-2xl text-white max-w-3xl mx-auto leading-relaxed animate-slide-up">
-        Comprehensive financial solutions tailored to your business needs
+        {t('services.hero.subtitle')}
       </p>
     </div>
   </section>
@@ -29,12 +40,12 @@ const locale = getLocaleFromPath(Astro.url.pathname);
   <section class="section bg-white">
     <div class="section-container">
       <div class="text-center mb-20">
-        <span class="text-secondary-600 font-semibold text-sm uppercase tracking-wider">What We Offer</span>
+        <span class="text-secondary-600 font-semibold text-sm uppercase tracking-wider">{t('services.overview.label')}</span>
         <h2 class="text-4xl lg:text-5xl font-bold text-text-primary mb-6 mt-2">
-          Complete Financial Solutions
+          {t('services.overview.title')}
         </h2>
         <p class="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-          From accounting and bookkeeping to strategic financial planning, we provide the expertise your business needs to thrive
+          {t('services.overview.subtitle')}
         </p>
       </div>
 
@@ -47,10 +58,10 @@ const locale = getLocaleFromPath(Astro.url.pathname);
             </svg>
           </div>
           <h3 class="text-2xl font-bold text-text-primary mb-4">
-            Accounting & Bookkeeping
+            {t('services.accounting.title')}
           </h3>
           <p class="text-text-secondary mb-8 leading-relaxed">
-            Professional accounting services including financial record keeping, transaction recording, and monthly financial statements preparation.
+            {t('services.accounting.description')}
           </p>
           <ul class="space-y-3 mb-8">
             <li class="flex items-center gap-3">
@@ -59,7 +70,7 @@ const locale = getLocaleFromPath(Astro.url.pathname);
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <span class="text-text-secondary">Monthly Financial Statements</span>
+              <span class="text-text-secondary">{t('services.accounting.feature1')}</span>
             </li>
             <li class="flex items-center gap-3">
               <div class="w-5 h-5 bg-primary-100 rounded-full flex items-center justify-center">
@@ -67,7 +78,7 @@ const locale = getLocaleFromPath(Astro.url.pathname);
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <span class="text-text-secondary">Transaction Recording</span>
+              <span class="text-text-secondary">{t('services.accounting.feature2')}</span>
             </li>
             <li class="flex items-center gap-3">
               <div class="w-5 h-5 bg-primary-100 rounded-full flex items-center justify-center">
@@ -75,7 +86,7 @@ const locale = getLocaleFromPath(Astro.url.pathname);
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <span class="text-text-secondary">Account Reconciliation</span>
+              <span class="text-text-secondary">{t('services.accounting.feature3')}</span>
             </li>
           </ul>
         </div>
@@ -88,10 +99,10 @@ const locale = getLocaleFromPath(Astro.url.pathname);
             </svg>
           </div>
           <h3 class="text-2xl font-bold text-text-primary mb-4">
-            Tax Planning & Compliance
+            {t('services.tax.title')}
           </h3>
           <p class="text-text-secondary mb-8 leading-relaxed">
-            Comprehensive tax services including planning, preparation, and compliance to minimize your tax burden while ensuring full regulatory compliance.
+            {t('services.tax.description')}
           </p>
           <ul class="space-y-3 mb-8">
             <li class="flex items-center gap-3">
@@ -100,7 +111,7 @@ const locale = getLocaleFromPath(Astro.url.pathname);
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <span class="text-text-secondary">Tax Return Preparation</span>
+              <span class="text-text-secondary">{t('services.tax.feature1')}</span>
             </li>
             <li class="flex items-center gap-3">
               <div class="w-5 h-5 bg-secondary-100 rounded-full flex items-center justify-center">
@@ -108,7 +119,7 @@ const locale = getLocaleFromPath(Astro.url.pathname);
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <span class="text-text-secondary">Tax Planning Strategies</span>
+              <span class="text-text-secondary">{t('services.tax.feature2')}</span>
             </li>
             <li class="flex items-center gap-3">
               <div class="w-5 h-5 bg-secondary-100 rounded-full flex items-center justify-center">
@@ -116,7 +127,7 @@ const locale = getLocaleFromPath(Astro.url.pathname);
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <span class="text-text-secondary">Compliance Management</span>
+              <span class="text-text-secondary">{t('services.tax.feature3')}</span>
             </li>
           </ul>
         </div>
@@ -129,10 +140,10 @@ const locale = getLocaleFromPath(Astro.url.pathname);
             </svg>
           </div>
           <h3 class="text-2xl font-bold text-text-primary mb-4">
-            Financial Consulting
+            {t('services.consulting.title')}
           </h3>
           <p class="text-text-secondary mb-8 leading-relaxed">
-            Strategic financial consulting to help you make informed business decisions, optimize cash flow, and achieve sustainable growth.
+            {t('services.consulting.description')}
           </p>
           <ul class="space-y-3 mb-8">
             <li class="flex items-center gap-3">
@@ -141,7 +152,7 @@ const locale = getLocaleFromPath(Astro.url.pathname);
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <span class="text-text-secondary">Financial Analysis</span>
+              <span class="text-text-secondary">{t('services.consulting.feature1')}</span>
             </li>
             <li class="flex items-center gap-3">
               <div class="w-5 h-5 bg-accent-100 rounded-full flex items-center justify-center">
@@ -149,7 +160,7 @@ const locale = getLocaleFromPath(Astro.url.pathname);
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <span class="text-text-secondary">Cash Flow Management</span>
+              <span class="text-text-secondary">{t('services.consulting.feature2')}</span>
             </li>
             <li class="flex items-center gap-3">
               <div class="w-5 h-5 bg-accent-100 rounded-full flex items-center justify-center">
@@ -157,7 +168,7 @@ const locale = getLocaleFromPath(Astro.url.pathname);
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <span class="text-text-secondary">Business Strategy</span>
+              <span class="text-text-secondary">{t('services.consulting.feature3')}</span>
             </li>
           </ul>
         </div>
@@ -394,17 +405,17 @@ const locale = getLocaleFromPath(Astro.url.pathname);
   <section class="section bg-gradient-to-br from-secondary-600 via-secondary-700 to-accent-600">
     <div class="section-container text-center">
       <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
-        Ready to Get Started?
+        {t('services.cta.title')}
       </h2>
       <p class="text-xl text-secondary-100 max-w-3xl mx-auto mb-12 leading-relaxed">
-        Contact us today to discuss your financial needs and discover how our services can benefit your business.
+        {t('services.cta.description')}
       </p>
-      <div class="flex flex-col sm:flex-row gap-6 justify-center">
-        <a href="/contact" class="btn-secondary">
-          Request Consultation
+      <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <a href="/contact" class="btn-primary text-lg px-8 py-4">
+          {t('services.cta.primary')}
         </a>
-        <a href="/about" class="btn-outline-white">
-          Learn More About Us
+        <a href="/about" class="btn-secondary text-lg px-8 py-4">
+          {t('services.cta.secondary')}
         </a>
       </div>
     </div>

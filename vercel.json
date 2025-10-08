@@ -1,0 +1,11 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "astro",
+  "rewrites": [
+    {
+      "source": "/ar/(.*)",
+      "destination": "/ar/$1"
+    }
+  ]
+}

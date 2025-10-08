@@ -21,11 +21,14 @@
   },
   "about": {
     "title": "Who We Are",
-    "subtitle": "Your Trusted Financial Partner",
-    "company_name": "Profit Management Consulting and Training Company",
     "description": "Profit Management Consulting and Training Company is a leading Egyptian accountancy firm delivering high-quality services. Our partners and expert staff uphold professional leadership and client service, adhering to modern governance, planning, and ethics.",
+    "hero": {
+      "title": "Who We Are",
+      "subtitle": "Your Trusted Financial Partner"
+    },
     "experience": "With years of cross-industry experience, our team identifies obstacles and provides innovative solutions, offering flexible, value-added services with boundless knowledge.",
     "mission": "We pursue peak professionalism in costing, budgeting, reporting, and economic and financial consulting to lead your Profit.",
+    "company_name": "Profit Management Consulting and Training Company",
     "years_experience": "With our 26+ years of industrial experience guide companies in improving financial positions and profitability.",
     "objective": {
       "title": "Our Objective",
@@ -67,6 +70,10 @@
   "services": {
     "title": "Our Services",
     "subtitle": "We achieve corporate profitability through AI analysis of all revenue and expense items",
+    "hero": {
+      "title": "Our Services",
+      "subtitle": "We achieve corporate profitability through AI analysis of all revenue and expense items"
+    },
     "profitability": {
       "title": "Corporate Profitability Leadership",
       "description": "Our Financial Consulting Team in Corporate Profitability Leadership plays a central role in guiding companies to achieve sustainable profit growth by aligning financial strategies with operational excellence."
@@ -131,13 +138,31 @@
       "title": "Certified Professionals",
       "description": "Our team consists of certified accountants and financial experts"
     },
-    "technology": {
-      "title": "Modern Technology",
-      "description": "We use the latest accounting software and digital solutions"
+    "consulting": {
+      "title": "Financial Consulting",
+      "description": "Strategic business consulting and financial planning to help your business reach its full potential",
+      "feature1": "Financial Analysis",
+      "feature2": "Cash Flow Management", 
+      "feature3": "Business Strategy"
+    },
+    "overview": {
+      "label": "What We Offer",
+      "title": "Complete Financial Solutions",
+      "subtitle": "From accounting and bookkeeping to strategic financial planning, we provide the expertise your business needs to thrive"
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "description": "Contact us today to discuss your financial needs and discover how our services can benefit your business",
+      "primary": "Request Consultation",
+      "secondary": "Learn More About Us"
     },
     "support": {
       "title": "24/7 Support",
       "description": "Round-the-clock support for all your financial needs"
+    },
+    "technology": {
+      "title": "Modern Technology",
+      "description": "We use the latest accounting software and digital solutions"
     }
   },
   "testimonials": {
@@ -236,25 +261,45 @@
         "question": "How do you price your services?",
         "answer": "Our pricing varies based on the service and complexity of your needs. We offer both hourly rates and fixed-price packages. Contact us for a customized quote."
       },
-      "q3": {
-        "question": "Do you work with small businesses?",
-        "answer": "Yes, we work with businesses of all sizes, from startups and small businesses to large enterprises. Our services are scalable to meet your specific needs."
-      },
       "q4": {
         "question": "How quickly do you respond to inquiries?",
         "answer": "We typically respond to all inquiries within 24 hours on business days. For urgent matters, please call us directly."
       }
     }
   },
-  "footer": {
-    "company": "Profit Management Consulting",
-    "description": "Professional accounting and business consulting services for growing enterprises.",
-    "links": {
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Service",
-      "careers": "Careers"
+  "form": {
+    "title": "Send Us a Message",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "company": "Company Name",
+    "service": "Service Needed",
+    "selectService": "Select a service",
+    "services": {
+      "accounting": "Accounting & Bookkeeping",
+      "tax": "Tax Planning & Compliance",
+      "consulting": "Financial Consulting",
+      "businessFormation": "Business Formation",
+      "payroll": "Payroll Management",
+      "training": "Financial Training",
+      "audit": "Audit & Assurance",
+      "other": "Other"
     },
-    "copyright": "© 2024 Profit Management Consulting. All rights reserved."
+    "message": "Message",
+    "messagePlaceholder": "Tell us about your business and how we can help...",
+    "submit": "Send Message",
+    "success": "Thank you! We'll get back to you soon.",
+    "error": "Please fill in all required fields."
+  },
+  "info": {
+    "title": "Contact Information",
+    "description": "We're here to help your business succeed. Reach out to us through any of the channels below, and we'll respond promptly.",
+    "phone": {
+      "title": "Phone",
+      "description": "Call us during business hours",
+      "number": "+201068970607"
+    }
   },
   "common": {
     "read_more": "Read More",
@@ -264,5 +309,25 @@
     "back_to_top": "Back to Top",
     "loading": "Loading...",
     "error": "An error occurred. Please try again."
+  },
+  "footer": {
+    "company": "Profit Management Consulting and Training",
+    "description": "A leading Egyptian accounting company providing high-quality services with over 26 years of experience in the industrial sector, guiding companies towards improving their financial position and profitability.",
+    "quick_links": "Quick Links",
+    "contact_info": "Contact Info",
+    "services_link": "Our Services",
+    "about_link": "About Us",
+    "contact_link": "Contact Us",
+    "phone": "+20 100 123 4567",
+    "email": "info@profit-manage.com",
+    "website": "www.profit-manage.com",
+    "hours": "Sunday-Thursday: 9:00 AM - 6:00 PM",
+    "address": "Cairo, Egypt",
+    "social": {
+      "linkedin": "Follow us on LinkedIn",
+      "facebook": "Follow us on Facebook",
+      "twitter": "Follow us on Twitter"
+    },
+    "copyright": "© 2024 Profit Management Consulting and Training. All rights reserved."
   }
 }
